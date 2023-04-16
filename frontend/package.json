@@ -46,5 +46,5 @@
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   },
- "proxy":"https://wild-rose-cobra-robe.cyclic.app"
+ "proxy":"https://deliveryapp-livid.vercel.app"
 }

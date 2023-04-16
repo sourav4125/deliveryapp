@@ -47,7 +47,7 @@ const Login = () => {
     
     console.log(email,password)
     if(email && password ){
-      let fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/login`,{
+      let fetchData = await fetch("https://deliveryapp-livid.vercel.app/login",{
         method : "POST",
         headers : {
           "Content-Type" : "application/json"
@@ -79,7 +79,7 @@ const Login = () => {
     <div className="w-full max-w-sm bg-white m-auto flex  flex-col p-4">
       {/* <h1 className='text-center text-2xl font-bold'>Sign up</h1> */}
       <div className="w-20 overflow-hidden rounded-full drop-shadow-md shadow-md m-auto">
-        <img src={loginSignupImage} className="w-full" />
+        <img src={loginSignupImage} className="w-full" alt="prop" />
       </div>
 
       <form className="w-full py-3 flex flex-col" onSubmit={handleSubmit}>
