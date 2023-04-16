@@ -11,12 +11,10 @@ import { loginRedux } from "../redux/userSlice";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-  // const [data, setData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-  const [email,setEmail]=useState("");
-  const [password,setPassword] = useState("")
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
   const navigate = useNavigate()  
   const userData = useSelector(state => state)
 
@@ -30,29 +28,26 @@ const Login = () => {
     setShowPassword((preve) => !preve);
   };
 
-  // const handleOnChange = (e)=>{
-  //   const {name,value} = e.target
-  //   setData((preve)=>{
-  //       return{
-  //           ...preve,
-  //           [name] : value
-  //       }
-  //   })
-  // }
+  const handleOnChange = (e)=>{
+    const {name,value} = e.target
+    setData((preve)=>{
+        return{
+            ...preve,
+            [name] : value
+        }
+    })
+  }
 
-  
   const handleSubmit = async(e)=>{
     e.preventDefault()
-
-    
-    console.log(email,password)
+    const {email,password} = data
     if(email && password ){
-      let fetchData = await fetch("https://wild-rose-cobra-robe.cyclic.app/login",{
+      const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/login`,{
         method : "POST",
         headers : {
-          "Content-Type" : "application/json"
+          "content-type" : "application/json"
         },
-        body : JSON.stringify({email,password})
+        body : JSON.stringify(data)
       })
 
       const dataRes = await fetchData.json()
@@ -89,8 +84,8 @@ const Login = () => {
           id="email"
           name="email"
           className="mt-1 mb-2 w-full bg-slate-200 px-2 py-1 rounded focus-within:outline-blue-300"
-          value={email}
-          onChange={e=>setEmail(e.target.value)}
+          value={data.email}
+          onChange={handleOnChange}
 
         />
 
@@ -101,8 +96,8 @@ const Login = () => {
             id="password"
             name="password"
             className=" w-full bg-slate-200 border-none outline-none "
-            value={password}
-            onChange={e => setPassword(e.target.value)}
+            value={data.password}
+            onChange={handleOnChange}
           />
           <span
             className="flex text-xl cursor-pointer"
