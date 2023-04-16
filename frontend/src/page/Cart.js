@@ -65,7 +65,7 @@ const Cart = () => {
         : 
         <>
           <div className="flex w-full justify-center items-center flex-col">
-            <img src={emptyCartImage} className="w-full max-w-sm"/>
+            <img src={emptyCartImage} className="w-full max-w-sm" alt="emptycart"/>
             <p className="text-slate-500 text-3xl font-bold">Empty Cart</p>
           </div>
         </>

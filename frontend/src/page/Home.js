@@ -42,11 +42,11 @@ const Home = () => {
             <img
               src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png"
               className="h-7"
-            />
+            alt="bike"/>
           </div>
           <h2 className="text-4xl md:text-7xl font-bold py-3">
             The Fasted Delivery in{" "}
-            <span className="text-red-600 text-">Your Home</span>
+            <span className="text-red-600 text-">Your City</span>
           </h2>
           <p className="py-3 text-base ">
             Lorem Ipsum is simply dummy text of the printing and typesetting

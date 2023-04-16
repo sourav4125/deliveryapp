@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { addCartItem,increaseQty } from "../redux/productSlide";
 
 const CardFeature = ({ image, name, price, category, loading, id }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() //creates a new instance of the useDispatch() function, which returns an object that has a dispatch property.
 
   const handleAddCartProduct = (e) => {
     dispatch(addCartItem({

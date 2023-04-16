@@ -12,7 +12,7 @@ let uploadProduct =  async (req, res) => {
 
   
 let product=async (req, res) => {
-    const data = await productModel.find({});
+    const data = await productModel.find();
     res.send(JSON.stringify(data));
   }
 

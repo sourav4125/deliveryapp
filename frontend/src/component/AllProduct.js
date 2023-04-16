@@ -4,8 +4,11 @@ import CardFeature from "./CardFeature";
 import FilterProduct from "./FilterProduct";
 
 const AllProduct = ({ heading }) => {
+ // it  is using a selector function that takes in the current state and returns an array of products.
   const productData = useSelector((state) => state.product.productList);
+  //it will iterate through the productData and create a new Set of category objects.
   const categoryList = [...new Set(productData.map((el) => el.category))];
+  
 
   //filter data display
   const [filterby, setFilterBy] = useState("");
@@ -15,12 +18,16 @@ const AllProduct = ({ heading }) => {
     setDataFilter(productData);
   }, [productData]);
 
+  // it is trying to filter the products by category.
   const handleFilterProduct = (category) => {
+    // It then filters out  one item from the list using a function called setDataFilter().
     setFilterBy(category)
+    // sets the filter by category, then it filters out all products from the product data that do not match the category passed in.
     const filter = productData.filter(
       (el) => el.category.toLowerCase() === category.toLowerCase()
     );
     setDataFilter(() => {
+      // it wil show the filter products only
       return [...filter];
     });
   };
@@ -65,6 +72,7 @@ const AllProduct = ({ heading }) => {
               );
             })
           : 
+          // has a loading indicator and is being filtered by the dataFilter array.
           loadingArrayFeature.map((el,index) => (
               <CardFeature loading="Loading..." key={index+"allProduct"} />
             ))}

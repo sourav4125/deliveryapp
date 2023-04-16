@@ -11,6 +11,7 @@ import { loginRedux } from "../redux/userSlice";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    // it creates another state variable called setData that will store the user's email address and password so they can be logged into later.
   const [data, setData] = useState({
     email: "",
     password: "",

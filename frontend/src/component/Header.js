@@ -8,7 +8,9 @@ import { logoutRedux } from "../redux/userSlice";
 import { toast } from "react-hot-toast";
 
 const Header = () => {
+  // it will be used to store the value of whether or not the menu should be shown.
   const [showMenu, setShowMenu] = useState(false);
+  //it returns whatever the user selects from the list of options in order
   const userData = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
@@ -23,7 +25,7 @@ const Header = () => {
   const cartItemNumber = useSelector((state)=>state.product.cartItem)
   return (
     <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
-      {/* desktop */}
+  
 
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
@@ -51,7 +53,7 @@ const Header = () => {
           <div className=" text-slate-600" onClick={handleShowMenu}>
             <div className="text-3xl cursor-pointer w-8 h-8 rounded-full overflow-hidden drop-shadow-md">
               {userData.image ? (
-                <img src={userData.image} className="h-full w-full" />
+                <img src={userData.image} className="h-full w-full" alt="user" />
               ) : (
                 <HiOutlineUserCircle />
               )}
@@ -105,7 +107,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* mobile */}
+   
     </header>
   );
 };
