@@ -47,7 +47,7 @@ const Login = () => {
     
     console.log(email,password)
     if(email && password ){
-      let fetchData = await fetch("https://food4u-2q93.onrender.com/login",{
+      let fetchData = await fetch("https://deliveryapp-gilt.vercel.app/login",{
         method : "POST",
         headers : {
           "Content-Type" : "application/json"

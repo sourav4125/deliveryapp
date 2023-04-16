@@ -43,7 +43,7 @@ const Newproduct = () => {
     const {name,image,category,price} = data
 
     if(name && image && category && price){
-      const fetchData = await fetch("https://food4u-2q93.onrender.com/uploadProduct",{
+      const fetchData = await fetch("https://deliveryapp-gilt.vercel.app/uploadProduct",{
         method : "POST",
         headers : {
           "content-type" : "application/json"
