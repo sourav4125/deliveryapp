@@ -7,7 +7,7 @@ router.post('/login',login);
 router.post('/signup',signup);
 
 router.post("/uploadProduct",uploadProduct);
-router.get('/product',product);
+// router.get('/product',product);
 
 
 module.exports = router
