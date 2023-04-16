@@ -47,7 +47,7 @@ const Login = () => {
     
     console.log(email,password)
     if(email && password ){
-      let fetchData = await fetch("https://food-s0j3.onrender.com/login",{
+      let fetchData = await fetch("https://wild-rose-cobra-robe.cyclic.app/login",{
         method : "POST",
         headers : {
           "Content-Type" : "application/json"

@@ -13,7 +13,7 @@ function App() {
  
   useEffect(()=>{
     (async()=>{
-      const res = await fetch('https://food-s0j3.onrender.com/product')
+      const res = await fetch('https://wild-rose-cobra-robe.cyclic.app/product')
       const resData = await res.json()
       console.log(resData)
       dispatch(setDataProduct(resData))

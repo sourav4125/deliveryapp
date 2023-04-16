@@ -55,7 +55,7 @@ console.log(process.env.REACT_APP_SERVER_DOMIN)
     if (firstName && email && password && confirmPassword) {
       if (password === confirmPassword) {
           console.log(data)
-          const fetchData = await fetch("https://food-s0j3.onrender.com/signup",{
+          const fetchData = await fetch("https://wild-rose-cobra-robe.cyclic.app/signup",{
             method : "POST",
             headers : {
               "Content-Type" : "application/json"
