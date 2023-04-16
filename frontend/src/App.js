@@ -13,7 +13,7 @@ function App() {
  
   useEffect(()=>{
     (async()=>{
-      const res = await fetch("https://deliveryapp-psi.vercel.app/product")
+      const res = await fetch("https://food4u-2q93.onrender.com/product")
       const resData = await res.json()
       console.log(resData)
       dispatch(setDataProduct(resData))
