@@ -47,7 +47,7 @@ const Login = () => {
     
     console.log(email,password)
     if(email && password ){
-      let fetchData = await fetch("https://deliveryapp-gilt.vercel.app/login",{
+      let fetchData = await fetch("http://localhost:8080/login",{
         method : "POST",
         headers : {
           "Content-Type" : "application/json"

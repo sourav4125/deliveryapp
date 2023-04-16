@@ -55,7 +55,7 @@ console.log(process.env.REACT_APP_SERVER_DOMIN)
     if (firstName && email && password && confirmPassword) {
       if (password === confirmPassword) {
           console.log(data)
-          const fetchData = await fetch("https://deliveryapp-gilt.vercel.app/signup",{
+          const fetchData = await fetch("http://localhost:8080/signup",{
             method : "POST",
             headers : {
               "Content-Type" : "application/json"

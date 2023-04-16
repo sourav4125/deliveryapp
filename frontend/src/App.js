@@ -13,7 +13,7 @@ function App() {
  
   useEffect(()=>{
     (async()=>{
-      const res = await fetch("https://deliveryapp-gilt.vercel.app/product")
+      const res = await fetch("http://localhost:8080/product")
       const resData = await res.json()
       console.log(resData)
       dispatch(setDataProduct(resData))
