@@ -11,11 +11,12 @@ import { loginRedux } from "../redux/userSlice";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    // it creates another state variable called setData that will store the user's email address and password so they can be logged into later.
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
+  // const [data, setData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  const [email,setEmail]=useState("");
+  const [password,setPassword] = useState("")
   const navigate = useNavigate()  
   const userData = useSelector(state => state)
 
@@ -29,26 +30,29 @@ const Login = () => {
     setShowPassword((preve) => !preve);
   };
 
-  const handleOnChange = (e)=>{
-    const {name,value} = e.target
-    setData((preve)=>{
-        return{
-            ...preve,
-            [name] : value
-        }
-    })
-  }
+  // const handleOnChange = (e)=>{
+  //   const {name,value} = e.target
+  //   setData((preve)=>{
+  //       return{
+  //           ...preve,
+  //           [name] : value
+  //       }
+  //   })
+  // }
 
+  
   const handleSubmit = async(e)=>{
     e.preventDefault()
-    const {email,password} = data
+
+    
+    console.log(email,password)
     if(email && password ){
-      const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/login`,{
+      let fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/login`,{
         method : "POST",
         headers : {
-          "content-type" : "application/json"
+          "Content-Type" : "application/json"
         },
-        body : JSON.stringify(data)
+        body : JSON.stringify({email,password})
       })
 
       const dataRes = await fetchData.json()
@@ -85,8 +89,8 @@ const Login = () => {
           id="email"
           name="email"
           className="mt-1 mb-2 w-full bg-slate-200 px-2 py-1 rounded focus-within:outline-blue-300"
-          value={data.email}
-          onChange={handleOnChange}
+          value={email}
+          onChange={e=>setEmail(e.target.value)}
 
         />
 
@@ -97,8 +101,8 @@ const Login = () => {
             id="password"
             name="password"
             className=" w-full bg-slate-200 border-none outline-none "
-            value={data.password}
-            onChange={handleOnChange}
+            value={password}
+            onChange={e => setPassword(e.target.value)}
           />
           <span
             className="flex text-xl cursor-pointer"
