@@ -11,10 +11,10 @@ let uploadProduct =  async (req, res) => {
   };
 
   
-let product=async (req, res) => {
-    const data = await productModel.find().limit(5)
-    res.send(JSON.stringify(data));
-  }
+// let product=async (req, res) => {
+//     const data = await productModel.find().limit(5)
+//     res.send(JSON.stringify(data));
+//   }
 
 
   module.exports = {uploadProduct,product}
