@@ -43,7 +43,7 @@ const Newproduct = () => {
     const {name,image,category,price} = data
 
     if(name && image && category && price){
-      const fetchData = await fetch("https://deliveryapp-livid.vercel.app/uploadProduct",{
+      const fetchData = await fetch("https://deliveryapp-kappa.vercel.app/uploadProduct",{
         method : "POST",
         headers : {
           "content-type" : "application/json"

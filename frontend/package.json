@@ -46,5 +46,5 @@
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   },
- "proxy":"https://deliveryapp-livid.vercel.app"
+ "proxy":"https://deliveryapp-kappa.vercel.app"
 }

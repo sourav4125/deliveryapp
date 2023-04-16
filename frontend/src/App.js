@@ -13,7 +13,7 @@ function App() {
  
   useEffect(()=>{
     (async()=>{
-      const res = await fetch("https://deliveryapp-livid.vercel.app/product")
+      const res = await fetch("https://deliveryapp-kappa.vercel.app/product")
       const resData = await res.json()
       console.log(resData)
       dispatch(setDataProduct(resData))

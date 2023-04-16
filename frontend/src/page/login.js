@@ -47,7 +47,7 @@ const Login = () => {
     
     console.log(email,password)
     if(email && password ){
-      let fetchData = await fetch("https://deliveryapp-livid.vercel.app/login",{
+      let fetchData = await fetch("https://deliveryapp-kappa.vercel.app/login",{
         method : "POST",
         headers : {
           "Content-Type" : "application/json"
