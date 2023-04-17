@@ -1,1 +1,20 @@
-{"version":"0.1.0","name":"frontend","dependencies":{"@reduxjs/toolkit":{"version":"1.9.2"},"@testing-library/jest-dom":{"version":"5.16.5"},"@testing-library/react":{"version":"13.4.0"},"@testing-library/user-event":{"version":"13.5.0"},"react-dom":{"version":"18.2.0"},"react-hot-toast":{"version":"2.4.0"},"react-icons":{"version":"4.7.1"},"react-redux":{"version":"8.0.5"},"react-router-dom":{"version":"6.8.0"},"react-scripts":{"version":"5.0.1"},"react":{"version":"18.2.0"},"redux":{"version":"4.2.1"},"tailwind-scrollbar":{"version":"2.1.0"},"web-vitals":{"version":"2.1.4"}}}
+{
+  "version": "0.1.0",
+  "name": "frontend",
+  "dependencies": {
+    "@reduxjs/toolkit": { "version": "1.9.2" },
+    "@testing-library/jest-dom": { "version": "5.16.5" },
+    "@testing-library/react": { "version": "13.4.0" },
+    "@testing-library/user-event": { "version": "13.5.0" },
+    "react-dom": { "version": "18.2.0" },
+    "react-hot-toast": { "version": "2.4.0" },
+    "react-icons": { "version": "4.7.1" },
+    "react-redux": { "version": "8.0.5" },
+    "react-router-dom": { "version": "6.8.0" },
+    "react-scripts": { "version": "5.0.1" },
+    "react": { "version": "18.2.0" },
+    "redux": { "version": "4.2.1" },
+    "tailwind-scrollbar": { "version": "2.1.0" },
+    "web-vitals": { "version": "2.1.4" }
+  }
+}

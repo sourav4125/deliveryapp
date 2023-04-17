@@ -1,7 +1,7 @@
 const express = require("express");
-const cors = require("cors");
+const cors = require("cors"); //it allows browsers to enforce the same-origin policy
 const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv").config(); //require dotenv , which loads up your environment variables into memory.
 // const route = require("./routes/route");
 const route = require("./routes/route");
 
@@ -19,8 +19,8 @@ mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("Connect to Databse"))
   .catch((err) => console.log(err));
-  app.use("/", route);
-
+  app.use("/", route); //default route
+// root URL of application.
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
