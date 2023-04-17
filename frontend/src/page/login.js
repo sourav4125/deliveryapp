@@ -21,7 +21,7 @@ const Login = () => {
   const userData = useSelector(state => state)
 
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() //it sends the type of action to the reducer function to perform its job,
 
 
 
