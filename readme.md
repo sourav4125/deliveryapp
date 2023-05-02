@@ -1,4 +1,4 @@
-#Complete MERN Stack Responsive E-commerce app.
+<h1>Complete MERN Stack Responsive E-commerce app.</h1>
 
 ![Screenshot (804)](https://user-images.githubusercontent.com/107460278/235639519-31c22227-3f08-4d41-84f2-9e76ada5cc0a.png)
 ![Screenshot (805)](https://user-images.githubusercontent.com/107460278/235639629-0312d1e0-8898-4ae6-9bc2-7322f2f9038a.png)
